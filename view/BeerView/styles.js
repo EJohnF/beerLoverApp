@@ -4,18 +4,23 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    paddingHorizontal: 16,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  image: {
+    height: 200,
+    width: 250,
+    resizeMode: 'contain',
+    alignSelf: 'center',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  row: {
+    marginVertical: 10,
   },
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black'
+  },
+  content: {
+    fontSize: 16,
+  }
 });

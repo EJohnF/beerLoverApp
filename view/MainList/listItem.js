@@ -3,7 +3,9 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles from './styles'
 
 export const BeerItem = (props) => (
-  <TouchableOpacity style={styles.itemContainer}>
+  <TouchableOpacity
+    onPress={props.onPress}
+    style={styles.itemContainer}>
     <Image
       style={styles.itemImage}
       source={{uri: props.image_url}}/>
