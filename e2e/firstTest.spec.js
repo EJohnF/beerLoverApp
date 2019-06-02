@@ -19,7 +19,7 @@ const currentMonth = moment().format('MM')
 
 describe('MainList', () => {
   beforeEach(async () => {
-    await device.reloadReactNative();
+    await device.launchApp({newInstance: true});
   });
 
   it('base functionality of  Search Bar - open, type and close', async () => {
