@@ -25,14 +25,11 @@ export default (state = initialState, action) => {
       return state;
 
     case filterAction.SET_BREW_FILTER:
-      if (action.payload !== state.name) {
-        return {
-          ...state,
-          currentPage: 0,
-          brew: action.payload
-        };
-      }
-      return state;
+      return {
+        ...state,
+        currentPage: 0,
+        brew: action.payload
+      };
 
     default:
       return state;

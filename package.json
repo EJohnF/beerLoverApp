@@ -26,6 +26,7 @@
     "@babel/runtime": "^7.4.5",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
+    "detox": "^12.10.2",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",
@@ -42,6 +43,18 @@
     "__tests__/",
     "node_modules/",
     "ios",
-    "android"
-  ]
+    "android",
+    "e2e"
+  ],
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/beerLover.app",
+        "build": "xcodebuild -project ios/beerLover.xcodeproj -scheme beerLover -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone X"
+      }
+    },
+    "test-runner": "jest"
+  }
 }

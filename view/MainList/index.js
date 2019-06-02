@@ -48,18 +48,22 @@ class MainList extends React.PureComponent {
     const { nameFilter, setNameFilter, brewFilter } = this.props;
     return (
       <View style={styles.container}>
+
         <SearchBar
           placeholder="Search by name"
           onChangeText={setNameFilter}
           value={nameFilter}
           lightTheme />
+
         <View style={styles.buttonContainer}>
           <Button
+            testID="brewFilterButton"
             title={brewFilter ? `brew after: ${brewFilter}` : 'Set brew filter'}
             containerStyle={{ flex: 1 }}
             onPress={this.showDateTimePicker} />
           {brewFilter && (
             <Button
+              testID="closeBrewFilter"
               icon={{
                 name: 'close',
                 color: 'white'
@@ -75,11 +79,13 @@ class MainList extends React.PureComponent {
           onCancel={this.hideDateTimePicker} />
 
         <FlatList
+          testID="beerList"
           data={this.props.list}
           keyExtractor={item => item.id.toString()}
-          renderItem={({ item }) => (
+          renderItem={({ item, index }) => (
             <BeerItem
               {...item}
+              index={index}
               onPress={() => this.selectBeer(item.id)} />
           )}
           onEndReached={this.props.getMore}

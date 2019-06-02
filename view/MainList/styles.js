@@ -19,6 +19,7 @@ export default StyleSheet.create({
   itemContainer: {
     flexDirection: 'row',
     paddingHorizontal: 16,
+    height: 70,
   },
   innerItemContainer: {
     justifyContent: 'space-between',

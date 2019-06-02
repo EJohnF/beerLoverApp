@@ -11,7 +11,9 @@ const InfoLine = ({ title, content }) => (
     <Text style={styles.title}>
       {title}
     </Text>
-    <Text style={styles.content}>
+    <Text
+      testID={`${title}_content`}
+      style={styles.content}>
       {content}
     </Text>
   </View>
@@ -19,9 +21,11 @@ const InfoLine = ({ title, content }) => (
 
 const BeerView = props => (
   <ScrollView
+    testID="beerViewList"
     contentContainerStyle={{ paddingVertical: 10 }}
     style={styles.container}>
     <Image
+      testID="beer_image"
       style={styles.image}
       source={{ uri: props.image_url }} />
     <InfoLine
@@ -43,6 +47,7 @@ const BeerView = props => (
         Food pairing
     </Text>
     <FlatList
+      testID="food_paiting_list"
       data={props.food_pairing}
       keyExtractor={item => item}
       renderItem={({ item }) => <Text>{item}</Text>} />
