@@ -1,0 +1,48 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "fetch": false,
+      "require": true,
+      "__DEV__": true,
+      "requestAnimationFrame": true
+  },
+  "extends": "airbnb",
+  "rules" : {
+    "react/jsx-filename-extension": "off",
+      "no-use-before-define": "off",
+      "react/no-did-mount-set-state": [1, "allow-in-func"],
+      "react/destructuring-assignment": "off",
+      "react/prefer-stateless-function": "off",
+      "react/prop-types": "off",
+      "no-param-reassign": "off",
+      "global-require": "off",
+      "comma-dangle": "off",
+      "react/jsx-closing-bracket-location": [2, "after-props"],
+      "react/jsx-one-expression-per-line": "off",
+      "react/no-unescaped-entities": "off",
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off",
+      "import/prefer-default-export": "off",
+      "no-console": "off",
+      "no-underscore-dangle": "off",
+      "import/no-extraneous-dependencies": "off",
+      "function-paren-newline": [2, "consistent"],
+      "no-unused-expressions": ["error", { "allowShortCircuit": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".android.js", ".ios.js"]
+      }
+    }
+  }
+}

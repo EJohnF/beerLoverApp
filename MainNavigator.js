@@ -1,7 +1,6 @@
-import React from 'react';
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import BeerView from './view/BeerView'
-import MainList from './view/MainList'
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import BeerView from './view/BeerView';
+import MainList from './view/MainList';
 
 
 const AppNavigator = createStackNavigator({

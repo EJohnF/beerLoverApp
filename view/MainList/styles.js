@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
@@ -35,5 +34,9 @@ export default StyleSheet.create({
     height: 1,
     backgroundColor: 'black',
     marginVertical: 4,
-  }
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    marginVertical: 8,
+  },
 });
