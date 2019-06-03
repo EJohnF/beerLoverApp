@@ -3,9 +3,9 @@ import {
 } from 'redux-saga/effects';
 import { beerAction, filterAction } from '../types';
 
-const lastId = -1;
 const baseURL = 'https://api.punkapi.com/v2/beers';
 const perPage = 10;
+
 function* fetchAsync() {
   try {
     const { name, brew, currentPage } = (yield select()).filters;
@@ -18,9 +18,7 @@ function* fetchAsync() {
     }
     const response = yield (yield fetch(url)).json();
     if (response && response.length > 0) {
-      if (response[response.length - 1] !== lastId) {
-        yield put({ type: beerAction.ADD_NEW, payload: response });
-      }
+      yield put({ type: beerAction.ADD_NEW, payload: response });
     }
   } catch (e) {
     console.warn(e);

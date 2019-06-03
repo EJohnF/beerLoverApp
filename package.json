@@ -40,7 +40,6 @@
     "preset": "react-native"
   },
   "eslintIgnore": [
-    "__tests__/",
     "node_modules/",
     "ios",
     "android",
